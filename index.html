@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Paolopapichulo — El papichulo of your engagement</title>
+<meta name="description" content="Paolopapichulo — Social media growth agency. We make the algorithm fall in love with your content." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="theme-color" content="#0C0A09" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
+      colors: {
+        ink: '#0C0A09',
+        gold: '#FBBF24',
+        golddeep: '#CA8A04',
+        magenta: '#EC4899',
+        cyan: '#06B6D4',
+        cream: '#FAFAF9',
+      },
+    },
+  },
+};
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:#0C0A09; }
+  .grad-text {
+    background: linear-gradient(100deg,#EC4899 0%,#FBBF24 50%,#06B6D4 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .glass {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+  }
+  .glow-cta { box-shadow: 0 0 0 0 rgba(6,182,212,0.5); transition: box-shadow .35s, transform .2s; }
+  .glow-cta:hover { box-shadow: 0 8px 40px -6px rgba(6,182,212,0.6); transform: translateY(-2px); }
+  .aura::before {
+    content:""; position:absolute; inset:-40%; z-index:-1;
+    background: radial-gradient(circle at 30% 30%, rgba(236,72,153,.35), transparent 40%),
+                radial-gradient(circle at 70% 60%, rgba(6,182,212,.30), transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(251,191,36,.25), transparent 40%);
+    filter: blur(40px); animation: float 12s ease-in-out infinite;
+  }
+  @keyframes float { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-20px) scale(1.05)} }
+  .marquee { animation: scroll 28s linear infinite; }
+  @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  .reveal { opacity:0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity:1; transform: none; }
+  .tilt { transition: transform .15s ease-out; transform-style: preserve-3d; }
+  .ring-spin { transform-origin:center; animation: spin 18s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  /* --- Logo hover choreography --- */
+  .logo-mark svg { transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
+  .logo-mark:hover svg { transform: rotate(-5deg) scale(1.06); }
+  .moustache { transform-origin: center bottom; transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
+  .logo-mark:hover .moustache { transform: scaleY(1.4) translateY(-2px); }
+  .glint { transform-origin: center; transform-box: fill-box; opacity: .35; transition: opacity .4s ease, transform .5s ease; }
+  .logo-mark:hover .glint { opacity: 1; transform: translateX(4px) scale(1.25); }
+  .logo-word { background-position: 0% center; }
+  .logo-mark:hover .logo-word { animation: sweep 1.4s linear infinite; }
+  @keyframes sweep { to { background-position: -200% center; } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before { animation: none !important; transition: none !important; }
+    .reveal { opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body class="font-body text-cream antialiased selection:bg-magenta/30">
+
+<!-- NAV -->
+<nav class="fixed top-4 left-4 right-4 z-50 mx-auto max-w-7xl">
+  <div class="glass rounded-2xl px-5 py-3 flex items-center justify-between">
+    <a href="#" class="logo-mark flex items-center gap-3 group" aria-label="Paolopapichulo — home">
+      <svg width="52" height="40" viewBox="0 0 72 56" fill="none" aria-hidden="true" class="shrink-0 overflow-visible">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="72" y2="56" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#EC4899"/><stop offset=".5" stop-color="#FBBF24"/><stop offset="1" stop-color="#06B6D4"/>
+          </linearGradient>
+        </defs>
+        <!-- temple arms -->
+        <path d="M6 18 L13 21 M66 18 L59 21" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+        <!-- lenses -->
+        <rect x="11" y="16" width="22" height="18" rx="9" fill="url(#g1)"/>
+        <rect x="39" y="16" width="22" height="18" rx="9" fill="url(#g1)"/>
+        <!-- bridge -->
+        <path d="M33 21 C35 18, 37 18, 39 21" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- lens shines -->
+        <circle class="glint" cx="18" cy="22" r="2.6" fill="#FFFFFF" opacity=".6"/>
+        <circle class="glint" cx="46" cy="22" r="2.6" fill="#FFFFFF" opacity=".6"/>
+        <!-- moustache -->
+        <path class="moustache" d="M22 40 C28 49, 33 49, 36 43 C39 49, 44 49, 50 40" stroke="#FBBF24" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-word grad-text font-display font-extrabold tracking-tight text-xl sm:text-2xl">paolopapichulo</span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm text-cream/70">
+      <a href="#services" class="hover:text-cream transition-colors">Services</a>
+      <a href="#how" class="hover:text-cream transition-colors">How it works</a>
+      <a href="#contact" class="hover:text-cream transition-colors">Contact</a>
+    </div>
+    <a href="#contact" class="glow-cta cursor-pointer rounded-xl bg-cyan px-4 py-2 text-sm font-semibold text-ink">Boost me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="relative overflow-hidden min-h-screen flex items-center pt-28 pb-16">
+  <div class="aura absolute inset-0"></div>
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:60px 60px"></div>
+  <div class="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-medium text-cream/80 mb-6">
+        <span class="h-2 w-2 rounded-full bg-cyan animate-pulse"></span>
+        Social media growth · 800+ happy clients
+      </span>
+      <h1 class="font-display font-extrabold leading-[0.95] text-5xl sm:text-6xl lg:text-7xl tracking-tight">
+        We make the<br>algorithm fall<br><span class="grad-text">in love</span> with you.
+      </h1>
+      <p class="mt-6 text-lg text-cream/70 max-w-md">
+        <span class="font-serif text-gold">El papichulo</span> of your engagement. Views, followers and interactions that take off — while you focus on your content. <span class="text-cream/90">Sin estrés, mi amor.</span>
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#contact" class="glow-cta cursor-pointer rounded-xl bg-cyan px-6 py-3.5 font-semibold text-ink">Start my growth</a>
+        <a href="#contact" class="cursor-pointer rounded-xl border border-gold/40 px-6 py-3.5 font-semibold text-gold hover:bg-gold/10 transition-colors">Get in touch</a>
+      </div>
+      <div class="mt-10 flex items-center gap-8 text-sm text-cream/60">
+        <div><span class="block font-display text-2xl font-bold text-cream" data-count="120">0</span>M+ views generated</div>
+        <div><span class="block font-display text-2xl font-bold text-cream" data-count="800">0</span>+ clients</div>
+        <div><span class="block font-display text-2xl font-bold text-cream" data-count="24">0</span>/7 support</div>
+      </div>
+    </div>
+    <!-- 3D Card -->
+    <div class="flex justify-center lg:justify-end">
+      <div id="tiltcard" class="tilt glass rounded-3xl p-8 w-full max-w-sm relative">
+        <div class="absolute -top-3 -right-3 rounded-full bg-gold text-ink text-xs font-bold px-3 py-1">LIVE</div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-12 w-12 rounded-full bg-gradient-to-br from-magenta to-cyan"></div>
+          <div><div class="font-semibold">@your_account</div><div class="text-xs text-cream/60">2 min ago</div></div>
+        </div>
+        <div class="h-40 rounded-2xl bg-gradient-to-br from-magenta/30 via-gold/20 to-cyan/30 mb-5 grid place-items-center">
+          <span class="font-serif text-2xl text-cream/90">papasito 🔥</span>
+        </div>
+        <div class="space-y-3">
+          <div class="flex justify-between text-sm"><span class="text-cream/60">Views</span><span class="font-semibold text-cyan" data-count="1240000">0</span></div>
+          <div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[92%] bg-gradient-to-r from-cyan to-magenta"></div></div>
+          <div class="flex justify-between text-sm"><span class="text-cream/60">Engagement</span><span class="font-semibold text-magenta">+312%</span></div>
+          <div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[78%] bg-gradient-to-r from-magenta to-gold"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<section class="border-y border-white/10 py-6 overflow-hidden" aria-label="Supported platforms">
+  <div class="flex whitespace-nowrap marquee w-max items-center text-cream/45 font-display font-semibold text-lg">
+    <!-- set repeated twice for seamless loop -->
+    <span class="mx-8 inline-flex items-center gap-2.5"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok</span>
+    <span class="mx-8 text-gold">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.5523 2.9147-.0567 1.2806-.0697 1.6939-.0636 4.9694.0061 3.2757.0205 3.6871.0826 4.9701.061 1.2767.264 2.1487.5635 2.9109.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9142.5527 1.2806.0563 1.6943.0695 4.9695.0634 3.2752-.0061 3.6877-.0207 4.9708-.0826 1.2767-.061 2.1487-.265 2.9109-.5633.7889-.3086 1.4573-.72 2.1228-1.3881.6655-.6682 1.0743-1.3378 1.38-2.1284.295-.7632.4961-1.6362.5527-2.9136.0563-1.2851.0696-1.6939.0635-4.9695-.0061-3.2756-.0207-3.6875-.0826-4.9701-.061-1.2767-.264-2.1493-.5633-2.9117-.3084-.7889-.72-1.4569-1.3879-2.1226C21.345 1.7415 20.6754 1.3309 19.8855 1.0252c-.7638-.295-1.6362-.4967-2.9142-.5527-1.2806-.0561-1.6945-.0695-4.9706-.0634-3.2752.0061-3.6868.0204-4.9706.0826m-.1684 9.0537c-1.2806.0584-2.0639.2393-2.66.4582-.5762.2208-1.0223.4878-1.4924.9551-.4701.4673-.7382.9128-.9601 1.4886-.2196.5967-.4017 1.3797-.4615 2.6604-.0568 1.2167-.0682 1.5818-.0606 4.6645.0076 3.0827.0211 3.4472.0809 4.6645.0584 1.2806.2393 2.0639.4582 2.66.2208.5762.4878 1.0223.9551 1.4924.4673.4701.9128.7382 1.4886.9601.5967.2196 1.3797.4017 2.6604.4615 1.2167.0568 1.5818.0682 4.6645.0606 3.0827-.0076 3.4472-.0211 4.6645-.0809 1.2806-.0584 2.0639-.2393 2.66-.4582.5762-.2208 1.0223-.4878 1.4924-.9551.4701-.4673.7382-.9128.9601-1.4886.2196-.5967.4017-1.3797.4615-2.6604.0568-1.2167.0682-1.5818.0606-4.6645-.0076-3.0827-.0211-3.4472-.0809-4.6645-.0584-1.2806-.2393-2.0639-.4582-2.66-.2208-.5762-.4878-1.0223-.9551-1.4924-.4673-.4701-.9128-.7382-1.4886-.9601-.5967-.2196-1.3797-.4017-2.6604-.4615-1.2167-.0568-1.5818-.0682-4.6645-.0606m4.5379 5.4322a3.0001 3.0001 0 1 1 0 6.0002 3.0001 3.0001 0 0 1 0-6.0002m4.847-1.4566a.84.84 0 1 1 0 1.68.84.84 0 0 1 0-1.68"/></svg>Instagram</span>
+    <span class="mx-8 text-gold">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</span>
+    <span class="mx-8 text-gold">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</span>
+    <span class="mx-8 text-gold">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0m5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02m1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2m.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3"/></svg>Spotify</span>
+    <span class="mx-8 text-gold">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>Twitch</span>
+    <span class="mx-8 text-gold">•</span>
+    <!-- duplicate -->
+    <span class="mx-8 inline-flex items-center gap-2.5" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok</span>
+    <span class="mx-8 text-gold" aria-hidden="true">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.5523 2.9147-.0567 1.2806-.0697 1.6939-.0636 4.9694.0061 3.2757.0205 3.6871.0826 4.9701.061 1.2767.264 2.1487.5635 2.9109.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9142.5527 1.2806.0563 1.6943.0695 4.9695.0634 3.2752-.0061 3.6877-.0207 4.9708-.0826 1.2767-.061 2.1487-.265 2.9109-.5633.7889-.3086 1.4573-.72 2.1228-1.3881.6655-.6682 1.0743-1.3378 1.38-2.1284.295-.7632.4961-1.6362.5527-2.9136.0563-1.2851.0696-1.6939.0635-4.9695-.0061-3.2756-.0207-3.6875-.0826-4.9701-.061-1.2767-.264-2.1493-.5633-2.9117-.3084-.7889-.72-1.4569-1.3879-2.1226C21.345 1.7415 20.6754 1.3309 19.8855 1.0252c-.7638-.295-1.6362-.4967-2.9142-.5527-1.2806-.0561-1.6945-.0695-4.9706-.0634-3.2752.0061-3.6868.0204-4.9706.0826m-.1684 9.0537c-1.2806.0584-2.0639.2393-2.66.4582-.5762.2208-1.0223.4878-1.4924.9551-.4701.4673-.7382.9128-.9601 1.4886-.2196.5967-.4017 1.3797-.4615 2.6604-.0568 1.2167-.0682 1.5818-.0606 4.6645.0076 3.0827.0211 3.4472.0809 4.6645.0584 1.2806.2393 2.0639.4582 2.66.2208.5762.4878 1.0223.9551 1.4924.4673.4701.9128.7382 1.4886.9601.5967.2196 1.3797.4017 2.6604.4615 1.2167.0568 1.5818.0682 4.6645.0606 3.0827-.0076 3.4472-.0211 4.6645-.0809 1.2806-.0584 2.0639-.2393 2.66-.4582.5762-.2208 1.0223-.4878 1.4924-.9551.4701-.4673.7382-.9128.9601-1.4886.2196-.5967.4017-1.3797.4615-2.6604.0568-1.2167.0682-1.5818.0606-4.6645-.0076-3.0827-.0211-3.4472-.0809-4.6645-.0584-1.2806-.2393-2.0639-.4582-2.66-.2208-.5762-.4878-1.0223-.9551-1.4924-.4673-.4701-.9128-.7382-1.4886-.9601-.5967-.2196-1.3797-.4017-2.6604-.4615-1.2167-.0568-1.5818-.0682-4.6645-.0606m4.5379 5.4322a3.0001 3.0001 0 1 1 0 6.0002 3.0001 3.0001 0 0 1 0-6.0002m4.847-1.4566a.84.84 0 1 1 0 1.68.84.84 0 0 1 0-1.68"/></svg>Instagram</span>
+    <span class="mx-8 text-gold" aria-hidden="true">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</span>
+    <span class="mx-8 text-gold" aria-hidden="true">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5" aria-hidden="true"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</span>
+    <span class="mx-8 text-gold" aria-hidden="true">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0m5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02m1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2m.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3"/></svg>Spotify</span>
+    <span class="mx-8 text-gold" aria-hidden="true">•</span>
+    <span class="mx-8 inline-flex items-center gap-2.5" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>Twitch</span>
+    <span class="mx-8 text-gold" aria-hidden="true">•</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 px-6">
+  <div class="mx-auto max-w-7xl">
+    <div class="reveal max-w-2xl mb-14">
+      <h2 class="font-display font-extrabold text-4xl sm:text-5xl tracking-tight">Our services <span class="grad-text">of charm</span></h2>
+      <p class="mt-4 text-cream/70">Everything you need to make your content irresistible to algorithms — and to real people.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal glass rounded-2xl p-6 hover:border-cyan/40 transition-colors">
+        <div class="h-11 w-11 rounded-xl bg-cyan/15 grid place-items-center mb-4"><svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.55-2.28A1 1 0 0121 8.62v6.76a1 1 0 01-1.45.9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+        <h3 class="font-display font-bold text-lg">View boost</h3>
+        <p class="mt-2 text-sm text-cream/65">Take off in your first hours of posting — where everything is decided.</p>
+      </div>
+      <div class="reveal glass rounded-2xl p-6 hover:border-magenta/40 transition-colors">
+        <div class="h-11 w-11 rounded-xl bg-magenta/15 grid place-items-center mb-4"><svg class="w-6 h-6 text-magenta" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-3.13a4 4 0 10-4 0M19 8a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <h3 class="font-display font-bold text-lg">Targeted followers</h3>
+        <p class="mt-2 text-sm text-cream/65">An audience that grows and sticks to your niche.</p>
+      </div>
+      <div class="reveal glass rounded-2xl p-6 hover:border-gold/40 transition-colors">
+        <div class="h-11 w-11 rounded-xl bg-gold/15 grid place-items-center mb-4"><svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+        <h3 class="font-display font-bold text-lg">Engagement</h3>
+        <p class="mt-2 text-sm text-cream/65">Likes, comments, shares — the social proof that reassures.</p>
+      </div>
+      <div class="reveal glass rounded-2xl p-6 hover:border-cyan/40 transition-colors">
+        <div class="h-11 w-11 rounded-xl bg-cyan/15 grid place-items-center mb-4"><svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <h3 class="font-display font-bold text-lg">Content strategy</h3>
+        <p class="mt-2 text-sm text-cream/65">Tailored advice to turn the boost into real, lasting traction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" class="py-24 px-6 bg-gradient-to-b from-transparent to-white/[0.02]">
+  <div class="mx-auto max-w-5xl text-center">
+    <h2 class="reveal font-display font-extrabold text-4xl sm:text-5xl tracking-tight">How it works, <span class="font-serif grad-text">amigo</span>?</h2>
+    <div class="mt-14 grid md:grid-cols-3 gap-8">
+      <div class="reveal">
+        <div class="font-display text-5xl font-extrabold grad-text">01</div>
+        <h3 class="font-display font-bold text-xl mt-3">Tell us your goal</h3>
+        <p class="mt-2 text-cream/65 text-sm">Platform, niche, volume. We listen, we advise.</p>
+      </div>
+      <div class="reveal">
+        <div class="font-display text-5xl font-extrabold grad-text">02</div>
+        <h3 class="font-display font-bold text-xl mt-3">We start the engine</h3>
+        <p class="mt-2 text-cream/65 text-sm">Gradual, natural growth, controlled down to the detail.</p>
+      </div>
+      <div class="reveal">
+        <div class="font-display text-5xl font-extrabold grad-text">03</div>
+        <h3 class="font-display font-bold text-xl mt-3">You reap the rewards</h3>
+        <p class="mt-2 text-cream/65 text-sm">Your numbers climb, and so does your credibility. <span class="font-serif text-gold">Qué rico.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="contact" class="py-24 px-6">
+  <div class="reveal mx-auto max-w-4xl glass rounded-3xl p-10 sm:p-14 text-center relative overflow-hidden">
+    <div class="aura absolute inset-0 opacity-60"></div>
+    <div class="relative">
+      <h2 class="font-display font-extrabold text-4xl sm:text-5xl tracking-tight">Ready to go <span class="grad-text">viral</span>?</h2>
+      <p class="mt-4 text-cream/70 max-w-xl mx-auto">Drop us a line, we reply fast. <span class="font-serif text-gold">Vámonos, papi.</span></p>
+      <div class="mt-8 flex flex-wrap gap-4 justify-center">
+        <a href="https://t.me/paolopapichulo" target="_blank" rel="noopener" class="glow-cta cursor-pointer inline-flex items-center gap-2 rounded-xl bg-cyan px-6 py-3.5 font-semibold text-ink">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          Telegram
+        </a>
+        <a href="mailto:admin@paolopapichulo.com" class="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-gold/40 px-6 py-3.5 font-semibold text-gold hover:bg-gold/10 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          admin@paolopapichulo.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 py-10 px-6">
+  <div class="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-cream/50">
+    <div class="flex items-center gap-2.5">
+      <svg width="38" height="30" viewBox="0 0 72 56" fill="none" aria-hidden="true">
+        <path d="M6 18 L13 21 M66 18 L59 21" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+        <rect x="11" y="16" width="22" height="18" rx="9" fill="url(#g1)"/>
+        <rect x="39" y="16" width="22" height="18" rx="9" fill="url(#g1)"/>
+        <path d="M33 21 C35 18, 37 18, 39 21" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M22 40 C28 49, 33 49, 36 43 C39 49, 44 49, 50 40" stroke="#FBBF24" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="font-display font-bold text-cream/80">paolopapichulo</span>
+    </div>
+    <p>© 2026 Paolopapichulo — Hecho con sabor. All rights reserved.</p>
+    <div class="flex gap-4">
+      <a href="https://t.me/paolopapichulo" class="hover:text-cyan transition-colors">Telegram</a>
+      <a href="mailto:admin@paolopapichulo.com" class="hover:text-gold transition-colors">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Animated counters
+  const fmt = n => n >= 1000000 ? (n/1000000).toFixed(1)+'M' : n >= 1000 ? Math.round(n/1000)+'k' : n;
+  const counters = document.querySelectorAll('[data-count]');
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target, target = +el.dataset.count; let cur = 0;
+      const step = target / 60;
+      const tick = () => { cur += step; if (cur < target) { el.textContent = fmt(Math.round(cur)); requestAnimationFrame(tick); } else el.textContent = fmt(target); };
+      tick(); cio.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => cio.observe(c));
+
+  // 3D tilt
+  const card = document.getElementById('tiltcard');
+  if (card && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    card.addEventListener('mousemove', (ev) => {
+      const r = card.getBoundingClientRect();
+      const x = (ev.clientX - r.left) / r.width - 0.5;
+      const y = (ev.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(900px) rotateY(${x*10}deg) rotateX(${-y*10}deg)`;
+    });
+    card.addEventListener('mouseleave', () => card.style.transform = 'perspective(900px) rotateY(0) rotateX(0)');
+  }
+</script>
+</body>
+</html>
